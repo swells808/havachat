@@ -3,27 +3,74 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C5DACA0A312A0E9C65D1AC96 /* Pods_havachat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8C463CFBA8C31851C043DD /* Pods_havachat.framework */; };
+		F5139B362466154B00A708FE /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5139B352466154B00A708FE /* StorageService.swift */; };
+		F5139B382466164E00A708FE /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5139B372466164E00A708FE /* PostService.swift */; };
+		F548B04E24578DAC00E7C9BF /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F548B04D24578DAC00E7C9BF /* StartViewController.swift */; };
+		F548B05024579A6900E7C9BF /* ArtistStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F548B04F24579A6900E7C9BF /* ArtistStartViewController.swift */; };
+		F548B0522457AAD600E7C9BF /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F548B0512457AAD600E7C9BF /* PushNotificationManager.swift */; };
+		F548B056245910B800E7C9BF /* Fan.swift in Sources */ = {isa = PBXBuildFile; fileRef = F548B055245910B800E7C9BF /* Fan.swift */; };
+		F548B058245911B200E7C9BF /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F548B057245911B200E7C9BF /* Artist.swift */; };
+		F548B05A245A24DE00E7C9BF /* ArtistReadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F548B059245A24DE00E7C9BF /* ArtistReadyViewController.swift */; };
+		F548B05C245A33BF00E7C9BF /* ArtistSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F548B05B245A33BF00E7C9BF /* ArtistSettingsViewController.swift */; };
+		F548B05E245B7F9B00E7C9BF /* FanStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F548B05D245B7F9B00E7C9BF /* FanStartViewController.swift */; };
+		F548B060245CE01C00E7C9BF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F548B05F245CE01C00E7C9BF /* User.swift */; };
+		F548B062245CF02900E7C9BF /* ArtistCreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F548B061245CF02900E7C9BF /* ArtistCreateUserViewController.swift */; };
+		F548B064245DFDE900E7C9BF /* ArtistSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F548B063245DFDE900E7C9BF /* ArtistSettingsTableViewCell.swift */; };
+		F548B066245DFE7000E7C9BF /* ArtistInfoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F548B065245DFE7000E7C9BF /* ArtistInfoHeader.swift */; };
+		F548B068245E1F2400E7C9BF /* ArtistSettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F548B067245E1F2400E7C9BF /* ArtistSettingsSection.swift */; };
+		F5D2B81724572EA200DDB052 /* ArtistListViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2B81624572EA200DDB052 /* ArtistListViewData.swift */; };
+		F5D2B81924573A8500DDB052 /* ArtistListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2B81824573A8500DDB052 /* ArtistListViewModel.swift */; };
 		F5FEF00C24525B8500B36CE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FEF00B24525B8500B36CE4 /* AppDelegate.swift */; };
 		F5FEF00E24525B8500B36CE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FEF00D24525B8500B36CE4 /* SceneDelegate.swift */; };
-		F5FEF01024525B8500B36CE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FEF00F24525B8500B36CE4 /* ViewController.swift */; };
 		F5FEF01324525B8500B36CE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5FEF01124525B8500B36CE4 /* Main.storyboard */; };
 		F5FEF01524525B8500B36CE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5FEF01424525B8500B36CE4 /* Assets.xcassets */; };
 		F5FEF01824525B8500B36CE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5FEF01624525B8500B36CE4 /* LaunchScreen.storyboard */; };
+		F5FEF02024525F7500B36CE4 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FEF01F24525F7500B36CE4 /* VideoViewController.swift */; };
+		F5FEF022245293F900B36CE4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5FEF021245293F900B36CE4 /* GoogleService-Info.plist */; };
+		F5FEF0252452BA6500B36CE4 /* ArtistSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FEF0242452BA6500B36CE4 /* ArtistSearchViewController.swift */; };
+		F5FEF0272452BA8800B36CE4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FEF0262452BA8800B36CE4 /* SettingsViewController.swift */; };
+		F5FEF0292452BAA900B36CE4 /* ArtistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FEF0282452BAA900B36CE4 /* ArtistTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		004219DDE912ED3F04C2A847 /* Pods-havachat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-havachat.debug.xcconfig"; path = "Target Support Files/Pods-havachat/Pods-havachat.debug.xcconfig"; sourceTree = "<group>"; };
+		54E95750B5ECB41EF2EC41DE /* Pods-havachat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-havachat.release.xcconfig"; path = "Target Support Files/Pods-havachat/Pods-havachat.release.xcconfig"; sourceTree = "<group>"; };
+		AF8C463CFBA8C31851C043DD /* Pods_havachat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_havachat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5139B352466154B00A708FE /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		F5139B372466164E00A708FE /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		F548B04D24578DAC00E7C9BF /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		F548B04F24579A6900E7C9BF /* ArtistStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistStartViewController.swift; sourceTree = "<group>"; };
+		F548B0512457AAD600E7C9BF /* PushNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
+		F548B055245910B800E7C9BF /* Fan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fan.swift; sourceTree = "<group>"; };
+		F548B057245911B200E7C9BF /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		F548B059245A24DE00E7C9BF /* ArtistReadyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistReadyViewController.swift; sourceTree = "<group>"; };
+		F548B05B245A33BF00E7C9BF /* ArtistSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistSettingsViewController.swift; sourceTree = "<group>"; };
+		F548B05D245B7F9B00E7C9BF /* FanStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanStartViewController.swift; sourceTree = "<group>"; };
+		F548B05F245CE01C00E7C9BF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F548B061245CF02900E7C9BF /* ArtistCreateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCreateUserViewController.swift; sourceTree = "<group>"; };
+		F548B063245DFDE900E7C9BF /* ArtistSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistSettingsTableViewCell.swift; sourceTree = "<group>"; };
+		F548B065245DFE7000E7C9BF /* ArtistInfoHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistInfoHeader.swift; sourceTree = "<group>"; };
+		F548B067245E1F2400E7C9BF /* ArtistSettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistSettingsSection.swift; sourceTree = "<group>"; };
+		F5D2B81624572EA200DDB052 /* ArtistListViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistListViewData.swift; sourceTree = "<group>"; };
+		F5D2B81824573A8500DDB052 /* ArtistListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistListViewModel.swift; sourceTree = "<group>"; };
 		F5FEF00824525B8500B36CE4 /* havachat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = havachat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5FEF00B24525B8500B36CE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5FEF00D24525B8500B36CE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F5FEF00F24525B8500B36CE4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F5FEF01224525B8500B36CE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F5FEF01424525B8500B36CE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5FEF01724525B8500B36CE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5FEF01924525B8500B36CE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5FEF01F24525F7500B36CE4 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		F5FEF021245293F900B36CE4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F5FEF0232452940A00B36CE4 /* havachat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = havachat.entitlements; sourceTree = "<group>"; };
+		F5FEF0242452BA6500B36CE4 /* ArtistSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistSearchViewController.swift; sourceTree = "<group>"; };
+		F5FEF0262452BA8800B36CE4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F5FEF0282452BAA900B36CE4 /* ArtistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +78,63 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5DACA0A312A0E9C65D1AC96 /* Pods_havachat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B69B79B4B3455B87E06A31F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				004219DDE912ED3F04C2A847 /* Pods-havachat.debug.xcconfig */,
+				54E95750B5ECB41EF2EC41DE /* Pods-havachat.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		607C8E83233B41334E956EE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF8C463CFBA8C31851C043DD /* Pods_havachat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F548B0532458F4DC00E7C9BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F548B0512457AAD600E7C9BF /* PushNotificationManager.swift */,
+				F5D2B81824573A8500DDB052 /* ArtistListViewModel.swift */,
+				F548B055245910B800E7C9BF /* Fan.swift */,
+				F548B057245911B200E7C9BF /* Artist.swift */,
+				F548B05F245CE01C00E7C9BF /* User.swift */,
+				F548B067245E1F2400E7C9BF /* ArtistSettingsSection.swift */,
+				F5139B352466154B00A708FE /* StorageService.swift */,
+				F5139B372466164E00A708FE /* PostService.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F548B0542459106300E7C9BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F5D2B81624572EA200DDB052 /* ArtistListViewData.swift */,
+				F5FEF0282452BAA900B36CE4 /* ArtistTableViewCell.swift */,
+				F548B063245DFDE900E7C9BF /* ArtistSettingsTableViewCell.swift */,
+				F548B065245DFE7000E7C9BF /* ArtistInfoHeader.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F5FEEFFF24525B8500B36CE4 = {
 			isa = PBXGroup;
 			children = (
 				F5FEF00A24525B8500B36CE4 /* havachat */,
 				F5FEF00924525B8500B36CE4 /* Products */,
+				4B69B79B4B3455B87E06A31F /* Pods */,
+				607C8E83233B41334E956EE2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,13 +149,25 @@
 		F5FEF00A24525B8500B36CE4 /* havachat */ = {
 			isa = PBXGroup;
 			children = (
+				F5FEF0232452940A00B36CE4 /* havachat.entitlements */,
 				F5FEF00B24525B8500B36CE4 /* AppDelegate.swift */,
 				F5FEF00D24525B8500B36CE4 /* SceneDelegate.swift */,
-				F5FEF00F24525B8500B36CE4 /* ViewController.swift */,
+				F548B0532458F4DC00E7C9BF /* Model */,
+				F548B0542459106300E7C9BF /* View */,
+				F548B04D24578DAC00E7C9BF /* StartViewController.swift */,
+				F548B04F24579A6900E7C9BF /* ArtistStartViewController.swift */,
+				F548B061245CF02900E7C9BF /* ArtistCreateUserViewController.swift */,
+				F548B05D245B7F9B00E7C9BF /* FanStartViewController.swift */,
+				F5FEF0242452BA6500B36CE4 /* ArtistSearchViewController.swift */,
+				F548B05B245A33BF00E7C9BF /* ArtistSettingsViewController.swift */,
+				F548B059245A24DE00E7C9BF /* ArtistReadyViewController.swift */,
+				F5FEF0262452BA8800B36CE4 /* SettingsViewController.swift */,
+				F5FEF01F24525F7500B36CE4 /* VideoViewController.swift */,
 				F5FEF01124525B8500B36CE4 /* Main.storyboard */,
 				F5FEF01424525B8500B36CE4 /* Assets.xcassets */,
 				F5FEF01624525B8500B36CE4 /* LaunchScreen.storyboard */,
 				F5FEF01924525B8500B36CE4 /* Info.plist */,
+				F5FEF021245293F900B36CE4 /* GoogleService-Info.plist */,
 			);
 			path = havachat;
 			sourceTree = "<group>";
@@ -74,9 +179,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5FEF01C24525B8500B36CE4 /* Build configuration list for PBXNativeTarget "havachat" */;
 			buildPhases = (
+				89EFAA760484B64E38B3FCB6 /* [CP] Check Pods Manifest.lock */,
 				F5FEF00424525B8500B36CE4 /* Sources */,
 				F5FEF00524525B8500B36CE4 /* Frameworks */,
 				F5FEF00624525B8500B36CE4 /* Resources */,
+				072A3082F4DCA76EA6E96E46 /* [CP] Embed Pods Frameworks */,
+				651DD4A4CC53375F1E78D641 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5FEF01824525B8500B36CE4 /* LaunchScreen.storyboard in Resources */,
+				F5FEF022245293F900B36CE4 /* GoogleService-Info.plist in Resources */,
 				F5FEF01524525B8500B36CE4 /* Assets.xcassets in Resources */,
 				F5FEF01324525B8500B36CE4 /* Main.storyboard in Resources */,
 			);
@@ -133,13 +242,92 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		072A3082F4DCA76EA6E96E46 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-havachat/Pods-havachat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-havachat/Pods-havachat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-havachat/Pods-havachat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		651DD4A4CC53375F1E78D641 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-havachat/Pods-havachat-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-havachat/Pods-havachat-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-havachat/Pods-havachat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89EFAA760484B64E38B3FCB6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-havachat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F5FEF00424525B8500B36CE4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5FEF01024525B8500B36CE4 /* ViewController.swift in Sources */,
 				F5FEF00C24525B8500B36CE4 /* AppDelegate.swift in Sources */,
+				F548B066245DFE7000E7C9BF /* ArtistInfoHeader.swift in Sources */,
+				F548B056245910B800E7C9BF /* Fan.swift in Sources */,
+				F5FEF02024525F7500B36CE4 /* VideoViewController.swift in Sources */,
+				F5FEF0252452BA6500B36CE4 /* ArtistSearchViewController.swift in Sources */,
+				F5D2B81924573A8500DDB052 /* ArtistListViewModel.swift in Sources */,
+				F548B064245DFDE900E7C9BF /* ArtistSettingsTableViewCell.swift in Sources */,
+				F5FEF0272452BA8800B36CE4 /* SettingsViewController.swift in Sources */,
+				F5139B382466164E00A708FE /* PostService.swift in Sources */,
+				F548B04E24578DAC00E7C9BF /* StartViewController.swift in Sources */,
+				F5139B362466154B00A708FE /* StorageService.swift in Sources */,
+				F548B060245CE01C00E7C9BF /* User.swift in Sources */,
+				F548B062245CF02900E7C9BF /* ArtistCreateUserViewController.swift in Sources */,
+				F548B05A245A24DE00E7C9BF /* ArtistReadyViewController.swift in Sources */,
+				F548B05024579A6900E7C9BF /* ArtistStartViewController.swift in Sources */,
+				F548B05E245B7F9B00E7C9BF /* FanStartViewController.swift in Sources */,
+				F548B0522457AAD600E7C9BF /* PushNotificationManager.swift in Sources */,
+				F548B058245911B200E7C9BF /* Artist.swift in Sources */,
+				F5D2B81724572EA200DDB052 /* ArtistListViewData.swift in Sources */,
+				F548B068245E1F2400E7C9BF /* ArtistSettingsSection.swift in Sources */,
+				F548B05C245A33BF00E7C9BF /* ArtistSettingsViewController.swift in Sources */,
+				F5FEF0292452BAA900B36CE4 /* ArtistTableViewCell.swift in Sources */,
 				F5FEF00E24525B8500B36CE4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,9 +470,12 @@
 		};
 		F5FEF01D24525B8500B36CE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 004219DDE912ED3F04C2A847 /* Pods-havachat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = havachat/havachat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 69HWWJ284P;
 				INFOPLIST_FILE = havachat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -300,9 +491,12 @@
 		};
 		F5FEF01E24525B8500B36CE4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54E95750B5ECB41EF2EC41DE /* Pods-havachat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = havachat/havachat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 69HWWJ284P;
 				INFOPLIST_FILE = havachat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
