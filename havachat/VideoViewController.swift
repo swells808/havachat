@@ -15,12 +15,12 @@ class VideoViewController: UIViewController {
     
     let appID = "c231ca45d2294123aabc401497fd3e2f"
     var agoraKit: AgoraRtcEngineKit?
-    let tempToken: String? = "006c231ca45d2294123aabc401497fd3e2fIAAciKLsq/hMAKlxCKDraJgH5h7pcWIvKKGE5JBPcgA4pAx+f9gh39v0EABggnZWNHG/XgEAAQAAAAAA"
-    var token: String? = nil 
+    var tempToken = ""
+    var token: String? = ""
     var userID: UInt = 0
-    var userName: String? = nil 
+    var userName: String? = ""
     var remoteID: UInt = 0
-    var channelName = "test"
+    var channelName = ""
     var handle: AuthStateDidChangeListenerHandle?
     
 
@@ -37,6 +37,9 @@ class VideoViewController: UIViewController {
         // Agora video functions
         setUpVideo()
         joinChannel()
+//        print(tempToken)
+//        print(channelName)
+//        print(userName)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -55,6 +58,10 @@ class VideoViewController: UIViewController {
     
     func setChannelName(channel: String) {
         channelName = channel
+    }
+    
+    func setTokenName(token: String) {
+        tempToken = token
     }
     
     // Agora video functions
@@ -82,6 +89,7 @@ class VideoViewController: UIViewController {
     
     func joinChannel() {
         localVideoView.isHidden = false
+        print(tempToken)
         
         getAgoraEngine().joinChannel(byToken: tempToken, channelId: channelName, info: nil, uid: userID) { [weak self] (sid, uid, elapsed) in
             self?.userID = uid
@@ -116,7 +124,7 @@ class VideoViewController: UIViewController {
     func leaveChannel() {
         getAgoraEngine().leaveChannel(nil)
         localVideoView.isHidden = true
-
+        self.dismiss(animated: true, completion: nil)
     }
     
     

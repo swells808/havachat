@@ -16,7 +16,7 @@ class ArtistReadyViewController: UIViewController {
     var userRef: DatabaseReference!
     
 
-    @IBOutlet weak var welcomeText: UILabel!
+
     
     
     override func viewDidLoad() {
@@ -27,24 +27,39 @@ class ArtistReadyViewController: UIViewController {
         //Firebase Database
 //        userRef = Database.database().reference(withPath: "users")
         
-        if let user = Auth.auth().currentUser {
-            let rootRef = Database.database().reference()
-            let userRef = rootRef.child("users").child(user.uid)
-            setValue(welcomeText.text, forKey: ("Welcome \(currentUser?.username)"))
+//        if let user = Auth.auth().currentUser {
+//            let rootRef = Database.database().reference()
+//            let userRef = rootRef.child("users").child(user.uid)
+//            setValue(welcomeText.text, forKey: ("Welcome \(currentUser?.username)"))
+//        }
+    }
+    
+    func showActionSheet() {
+        let alert = UIAlertController(title: "Incomming Chat", message: "Incomming call from Fan Justin Bieber", preferredStyle: .alert)
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let start = UIAlertAction(title: "Accept", style: .default) { (action) in
+            self.performSegue(withIdentifier: "ArtistChatSegue", sender: self)
         }
+        
+        let imgViewTitle = UIImageView(frame: CGRect(x: 10, y: 10, width: 30, height: 30))
+        imgViewTitle.image = UIImage(named:"justin-bieber-pic-circle")
+        alert.view.addSubview(imgViewTitle)
+        
+        alert.addAction(start)
+        alert.addAction(cancel)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func setingsButtonPressed(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "ArtistsSettingSegue", sender: self)
+    }
+    
+    @IBAction func simulateChatPressed(_ sender: UIButton) {
+        showActionSheet()
     }
     
 
-    @IBAction func readyClick(_ sender: Any) {
-    }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

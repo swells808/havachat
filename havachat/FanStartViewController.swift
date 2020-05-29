@@ -82,7 +82,7 @@ class FanStartViewController: UIViewController, FUIAuthDelegate {
             let userRef = Database.database().reference().child("users").child(user.uid)
             userRef.observeSingleEvent(of: .value, with: { (snapshot) in
                 if let userDict = snapshot.value as? [String : Any] {
-                    self.performSegue(withIdentifier: "FanHomeSegue", sender: self)
+                    self.performSegue(withIdentifier: "FanLoggedInSegue", sender: self)
                 } else {
                     self.performSegue(withIdentifier: "FanFirstLoginSegue", sender: self)
                 }

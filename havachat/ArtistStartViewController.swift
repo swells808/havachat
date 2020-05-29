@@ -76,10 +76,10 @@ class ArtistStartViewController: UIViewController, FUIAuthDelegate {
 
         guard let user = authDataResult?.user
             else { return }
-        let userRef = Database.database().reference().child("users").child(user.uid)
-        userRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            if let userDict = snapshot.value as? [String : Any] {
-                print("User already exists \(userDict.debugDescription).")
+        let artistRef = Database.database().reference().child("artists").child(user.uid)
+        artistRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            if (snapshot.value as? [String : Any]) != nil {
+                self.performSegue(withIdentifier: "ArtistLoggedInSegue", sender: self)
             } else {
                 self.performSegue(withIdentifier: "ArtistCreateUserSegue", sender: self)
             }

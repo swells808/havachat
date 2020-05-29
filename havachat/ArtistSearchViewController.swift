@@ -13,11 +13,14 @@ import SwiftyJSON
 import Alamofire
 
 
-class ArtistSearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, FUIAuthDelegate {
+class ArtistSearchViewController: UIViewController, UISearchBarDelegate, FUIAuthDelegate {
     
     var currentUser: User?
-    var userRef: DatabaseReference!
-    var resultsArray = [[String:String]]()
+    var artistList = [Artist]()
+    var resultsArray = [[String:Any]]()
+    
+    let artistRef = Database.database().reference(withPath: "artists")
+
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -43,44 +46,36 @@ class ArtistSearchViewController: UIViewController, UITableViewDelegate, UITable
             
         }
         
-        //Firebase Database
-        userRef = Database.database().reference(withPath: "users")
+        
         
         //Load All Table Data
-        
+        loadArtists()
     }
     
     @objc func userBackToStart() {
         performSegue(withIdentifier: "UserBackToStartSegue", sender: self)
     }
     
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return resultsArray.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath)
-
-        if let userCell = cell as? ArtistTableViewCell {
-            let userData = resultsArray[indexPath.row]
-            userCell.displayName.text = userData["displayname"]
-            userCell.email.text = userData["email"]
+    func loadArtists() {
+            artistRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                for case let item as DataSnapshot in snapshot.children {
+                    if var itemData = item.value as? [String:Any] {
+                        itemData["uid"] = item.key
+                        self.resultsArray.append(itemData)
+                    }
+                }
+                self.tableView.reloadData()
+    //            print(self.resultsArray)
+            })
+            
         }
-        
-      return cell
-    }
+
     
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let searchText = searchBar.text?.lowercased(), searchText != "" {
             resultsArray.removeAll()
-            queryText(searchText, inField: "username")
-            queryText(searchText, inField: "email")
+            queryText(searchText, inField: "artistUsername")
         } else {
             let alert = UIAlertController(title: "Error", message: "Please enter a username.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
@@ -89,7 +84,7 @@ class ArtistSearchViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func queryText(_ text: String, inField child: String) {
-        userRef.queryOrdered(byChild: child)
+        artistRef.queryOrdered(byChild: child)
         .queryStarting(atValue: text)
         .queryEnding(atValue: text+"\u{f8ff}")
             .observeSingleEvent(of: .value) { [weak self] (snapshot) in
@@ -132,30 +127,76 @@ class ArtistSearchViewController: UIViewController, UITableViewDelegate, UITable
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-        if segue.identifier == "startCall" {
-            guard let userData = sender as? [String: String] else {
-                assert(false, "startCall segue triggered improperly")
-                return
-            }
-            if let videoController = segue.destination as? VideoViewController {
-                let uids = [currentUser?.uid ?? "", userData["uid"] ?? ""].sorted { $0 < $1 }
-                let channelName = uids[0] + uids[1]
-                videoController.setChannelName(channel: channelName)
-                videoController.setUserName(name: currentUser?.username)
-                let request = AF.request("https://havachat-videochat.herokuapp.com/access_token?channel=\(channelName)&uid=\(String(describing: currentUser?.uid))")
-
-                request.responseJSON { (response) in
-                    guard let tokenDict = response.value as! [String : Any]? else { return }
-                    let token = tokenDict["token"] as! String
-                    // use the generated token here
-                    }
-                 }
-
-            }
+        if segue.identifier == "DetailSegue" {
+            let indexPaths=self.tableView!.indexPathForSelectedRow
+            let indexPath = indexPaths! as NSIndexPath
+            let vc = segue.destination as! ArtistDetailViewController
+            vc.artistData = self.resultsArray[indexPath.row]
         }
+    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        // Get the new view controller using segue.destination.
+//        // Pass the selected object to the new view controller.
+//        if segue.identifier == "startCall" {
+//            guard let userData = sender as? [String: String] else {
+//                assert(false, "startCall segue triggered improperly")
+//                return
+//            }
+//            if let videoController = segue.destination as? VideoViewController {
+//                let uids = [currentUser?.uid ?? "", userData["uid"] ?? ""].sorted { $0 < $1 }
+//                let channelName = uids[0] + uids[1]
+//                videoController.setChannelName(channel: channelName)
+//                videoController.setUserName(name: currentUser?.username)
+//                let request = AF.request("https://havachat-videochat.herokuapp.com/access_token?channel=\(channelName)&uid=\(String(describing: currentUser?.uid))")
+//
+//                request.responseJSON { (response) in
+//                    guard let tokenDict = response.value as! [String : Any]? else { return }
+//                    let token = tokenDict["token"] as! String
+//                    // use the generated token here
+//                    }
+//                 }
+//
+//            }
+//        }
     }
     
 
+extension ArtistSearchViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return resultsArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "artistCell", for: indexPath)
+        
+        if let artistCell = cell as? ArtistTableViewCell {
+            let artistData = resultsArray[indexPath.row]
+            artistCell.artistNameCell.text = artistData["artistUsername"] as? String
+            artistCell.artistTypeCell.text = artistData["artistField"] as? String
+            artistCell.artistOnlineCell.text = artistData["isLoggedOn"] as? String
+            let itemURL = URL(string: (artistData["pPictureUrl"] as? String)!)
+            ImageService.getImage(withURL: itemURL!) { (image) in
+                artistCell.artistImageCell.image = image
+            }
+            
+        }
+        
+        return cell
+    }
+    
+    
+}
 
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
+    }
+}

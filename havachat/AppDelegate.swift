@@ -14,6 +14,8 @@ import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -21,6 +23,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Firebase
         FirebaseApp.configure()
         Database.database().isPersistenceEnabled = true
+        
+        let authListener = Auth.auth().addStateDidChangeListener { (auth, user) in
+            if user != nil {
+                UserService.observeUserProfile(user!.uid) { (userProfile) in
+                    UserService.currentUserProfile = userProfile
+                }
+            } else {
+                UserService.currentUserProfile = nil 
+            }
+        }
         
         return true
     }

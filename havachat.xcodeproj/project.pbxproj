@@ -10,6 +10,11 @@
 		C5DACA0A312A0E9C65D1AC96 /* Pods_havachat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8C463CFBA8C31851C043DD /* Pods_havachat.framework */; };
 		F5139B362466154B00A708FE /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5139B352466154B00A708FE /* StorageService.swift */; };
 		F5139B382466164E00A708FE /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5139B372466164E00A708FE /* PostService.swift */; };
+		F521F0412476124100352865 /* ArtistOnboard1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F521F0402476124100352865 /* ArtistOnboard1ViewController.swift */; };
+		F521F04324763C1F00352865 /* ArtistOnboard2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F521F04224763C1F00352865 /* ArtistOnboard2ViewController.swift */; };
+		F521F0452476531F00352865 /* ArtistOnboard3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F521F0442476531F00352865 /* ArtistOnboard3ViewController.swift */; };
+		F53E0F9E24786B2800AA1E8E /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53E0F9D24786B2800AA1E8E /* NSAttributedStringExtension.swift */; };
+		F53E0FA024787E3900AA1E8E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53E0F9F24787E3900AA1E8E /* UserService.swift */; };
 		F548B04E24578DAC00E7C9BF /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F548B04D24578DAC00E7C9BF /* StartViewController.swift */; };
 		F548B05024579A6900E7C9BF /* ArtistStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F548B04F24579A6900E7C9BF /* ArtistStartViewController.swift */; };
 		F548B0522457AAD600E7C9BF /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F548B0512457AAD600E7C9BF /* PushNotificationManager.swift */; };
@@ -22,9 +27,12 @@
 		F548B062245CF02900E7C9BF /* ArtistCreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F548B061245CF02900E7C9BF /* ArtistCreateUserViewController.swift */; };
 		F548B064245DFDE900E7C9BF /* ArtistSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F548B063245DFDE900E7C9BF /* ArtistSettingsTableViewCell.swift */; };
 		F548B066245DFE7000E7C9BF /* ArtistInfoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F548B065245DFE7000E7C9BF /* ArtistInfoHeader.swift */; };
-		F548B068245E1F2400E7C9BF /* ArtistSettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F548B067245E1F2400E7C9BF /* ArtistSettingsSection.swift */; };
+		F5C6EB28247CF9990085DEE2 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C6EB27247CF9990085DEE2 /* ImageService.swift */; };
+		F5C6EB2A247CFBFA0085DEE2 /* ArtistDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C6EB29247CFBFA0085DEE2 /* ArtistDetailViewController.swift */; };
 		F5D2B81724572EA200DDB052 /* ArtistListViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2B81624572EA200DDB052 /* ArtistListViewData.swift */; };
-		F5D2B81924573A8500DDB052 /* ArtistListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2B81824573A8500DDB052 /* ArtistListViewModel.swift */; };
+		F5EE87C8247A33D300444737 /* ArtistService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EE87C7247A33D300444737 /* ArtistService.swift */; };
+		F5EE87CA247A43A800444737 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EE87C9247A43A800444737 /* Chat.swift */; };
+		F5EE87CC247A4E8A00444737 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EE87CB247A4E8A00444737 /* ChatService.swift */; };
 		F5FEF00C24525B8500B36CE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FEF00B24525B8500B36CE4 /* AppDelegate.swift */; };
 		F5FEF00E24525B8500B36CE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FEF00D24525B8500B36CE4 /* SceneDelegate.swift */; };
 		F5FEF01324525B8500B36CE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5FEF01124525B8500B36CE4 /* Main.storyboard */; };
@@ -43,6 +51,11 @@
 		AF8C463CFBA8C31851C043DD /* Pods_havachat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_havachat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5139B352466154B00A708FE /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		F5139B372466164E00A708FE /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		F521F0402476124100352865 /* ArtistOnboard1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistOnboard1ViewController.swift; sourceTree = "<group>"; };
+		F521F04224763C1F00352865 /* ArtistOnboard2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistOnboard2ViewController.swift; sourceTree = "<group>"; };
+		F521F0442476531F00352865 /* ArtistOnboard3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistOnboard3ViewController.swift; sourceTree = "<group>"; };
+		F53E0F9D24786B2800AA1E8E /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtension.swift; sourceTree = "<group>"; };
+		F53E0F9F24787E3900AA1E8E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		F548B04D24578DAC00E7C9BF /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		F548B04F24579A6900E7C9BF /* ArtistStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistStartViewController.swift; sourceTree = "<group>"; };
 		F548B0512457AAD600E7C9BF /* PushNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
@@ -55,9 +68,12 @@
 		F548B061245CF02900E7C9BF /* ArtistCreateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCreateUserViewController.swift; sourceTree = "<group>"; };
 		F548B063245DFDE900E7C9BF /* ArtistSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistSettingsTableViewCell.swift; sourceTree = "<group>"; };
 		F548B065245DFE7000E7C9BF /* ArtistInfoHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistInfoHeader.swift; sourceTree = "<group>"; };
-		F548B067245E1F2400E7C9BF /* ArtistSettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistSettingsSection.swift; sourceTree = "<group>"; };
+		F5C6EB27247CF9990085DEE2 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		F5C6EB29247CFBFA0085DEE2 /* ArtistDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailViewController.swift; sourceTree = "<group>"; };
 		F5D2B81624572EA200DDB052 /* ArtistListViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistListViewData.swift; sourceTree = "<group>"; };
-		F5D2B81824573A8500DDB052 /* ArtistListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistListViewModel.swift; sourceTree = "<group>"; };
+		F5EE87C7247A33D300444737 /* ArtistService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistService.swift; sourceTree = "<group>"; };
+		F5EE87C9247A43A800444737 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		F5EE87CB247A4E8A00444737 /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
 		F5FEF00824525B8500B36CE4 /* havachat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = havachat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5FEF00B24525B8500B36CE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5FEF00D24525B8500B36CE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,13 +122,17 @@
 			isa = PBXGroup;
 			children = (
 				F548B0512457AAD600E7C9BF /* PushNotificationManager.swift */,
-				F5D2B81824573A8500DDB052 /* ArtistListViewModel.swift */,
+				F53E0F9D24786B2800AA1E8E /* NSAttributedStringExtension.swift */,
 				F548B055245910B800E7C9BF /* Fan.swift */,
 				F548B057245911B200E7C9BF /* Artist.swift */,
 				F548B05F245CE01C00E7C9BF /* User.swift */,
-				F548B067245E1F2400E7C9BF /* ArtistSettingsSection.swift */,
-				F5139B352466154B00A708FE /* StorageService.swift */,
+				F5EE87C9247A43A800444737 /* Chat.swift */,
+				F5EE87CB247A4E8A00444737 /* ChatService.swift */,
 				F5139B372466164E00A708FE /* PostService.swift */,
+				F53E0F9F24787E3900AA1E8E /* UserService.swift */,
+				F5EE87C7247A33D300444737 /* ArtistService.swift */,
+				F5139B352466154B00A708FE /* StorageService.swift */,
+				F5C6EB27247CF9990085DEE2 /* ImageService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -156,11 +176,15 @@
 				F548B0542459106300E7C9BF /* View */,
 				F548B04D24578DAC00E7C9BF /* StartViewController.swift */,
 				F548B04F24579A6900E7C9BF /* ArtistStartViewController.swift */,
+				F521F0402476124100352865 /* ArtistOnboard1ViewController.swift */,
+				F521F04224763C1F00352865 /* ArtistOnboard2ViewController.swift */,
+				F521F0442476531F00352865 /* ArtistOnboard3ViewController.swift */,
 				F548B061245CF02900E7C9BF /* ArtistCreateUserViewController.swift */,
-				F548B05D245B7F9B00E7C9BF /* FanStartViewController.swift */,
-				F5FEF0242452BA6500B36CE4 /* ArtistSearchViewController.swift */,
 				F548B05B245A33BF00E7C9BF /* ArtistSettingsViewController.swift */,
 				F548B059245A24DE00E7C9BF /* ArtistReadyViewController.swift */,
+				F548B05D245B7F9B00E7C9BF /* FanStartViewController.swift */,
+				F5C6EB29247CFBFA0085DEE2 /* ArtistDetailViewController.swift */,
+				F5FEF0242452BA6500B36CE4 /* ArtistSearchViewController.swift */,
 				F5FEF0262452BA8800B36CE4 /* SettingsViewController.swift */,
 				F5FEF01F24525F7500B36CE4 /* VideoViewController.swift */,
 				F5FEF01124525B8500B36CE4 /* Main.storyboard */,
@@ -306,12 +330,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F53E0F9E24786B2800AA1E8E /* NSAttributedStringExtension.swift in Sources */,
 				F5FEF00C24525B8500B36CE4 /* AppDelegate.swift in Sources */,
+				F5EE87C8247A33D300444737 /* ArtistService.swift in Sources */,
 				F548B066245DFE7000E7C9BF /* ArtistInfoHeader.swift in Sources */,
 				F548B056245910B800E7C9BF /* Fan.swift in Sources */,
 				F5FEF02024525F7500B36CE4 /* VideoViewController.swift in Sources */,
 				F5FEF0252452BA6500B36CE4 /* ArtistSearchViewController.swift in Sources */,
-				F5D2B81924573A8500DDB052 /* ArtistListViewModel.swift in Sources */,
+				F5C6EB2A247CFBFA0085DEE2 /* ArtistDetailViewController.swift in Sources */,
+				F53E0FA024787E3900AA1E8E /* UserService.swift in Sources */,
+				F521F04324763C1F00352865 /* ArtistOnboard2ViewController.swift in Sources */,
+				F5EE87CA247A43A800444737 /* Chat.swift in Sources */,
 				F548B064245DFDE900E7C9BF /* ArtistSettingsTableViewCell.swift in Sources */,
 				F5FEF0272452BA8800B36CE4 /* SettingsViewController.swift in Sources */,
 				F5139B382466164E00A708FE /* PostService.swift in Sources */,
@@ -319,15 +348,18 @@
 				F5139B362466154B00A708FE /* StorageService.swift in Sources */,
 				F548B060245CE01C00E7C9BF /* User.swift in Sources */,
 				F548B062245CF02900E7C9BF /* ArtistCreateUserViewController.swift in Sources */,
+				F521F0412476124100352865 /* ArtistOnboard1ViewController.swift in Sources */,
 				F548B05A245A24DE00E7C9BF /* ArtistReadyViewController.swift in Sources */,
 				F548B05024579A6900E7C9BF /* ArtistStartViewController.swift in Sources */,
 				F548B05E245B7F9B00E7C9BF /* FanStartViewController.swift in Sources */,
 				F548B0522457AAD600E7C9BF /* PushNotificationManager.swift in Sources */,
 				F548B058245911B200E7C9BF /* Artist.swift in Sources */,
+				F5C6EB28247CF9990085DEE2 /* ImageService.swift in Sources */,
 				F5D2B81724572EA200DDB052 /* ArtistListViewData.swift in Sources */,
-				F548B068245E1F2400E7C9BF /* ArtistSettingsSection.swift in Sources */,
 				F548B05C245A33BF00E7C9BF /* ArtistSettingsViewController.swift in Sources */,
+				F521F0452476531F00352865 /* ArtistOnboard3ViewController.swift in Sources */,
 				F5FEF0292452BAA900B36CE4 /* ArtistTableViewCell.swift in Sources */,
+				F5EE87CC247A4E8A00444737 /* ChatService.swift in Sources */,
 				F5FEF00E24525B8500B36CE4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,7 +507,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = havachat/havachat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 69HWWJ284P;
 				INFOPLIST_FILE = havachat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -496,7 +528,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = havachat/havachat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 69HWWJ284P;
 				INFOPLIST_FILE = havachat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

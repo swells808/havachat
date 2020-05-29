@@ -10,8 +10,11 @@ import UIKit
 
 class ArtistTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var displayName: UILabel!
-    @IBOutlet weak var email: UILabel!
+    @IBOutlet weak var artistImageCell: UIImageView!
+    @IBOutlet weak var artistNameCell: UILabel!
+    @IBOutlet weak var artistTypeCell: UILabel!
+    @IBOutlet weak var artistOnlineCell: UILabel!
+    
     
 
     override func awakeFromNib() {
@@ -24,5 +27,6 @@ class ArtistTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+
 
 }
